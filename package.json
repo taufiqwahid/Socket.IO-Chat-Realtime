@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Web Real-Time Chat with  Socket.IO",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "socket.io"
   ],
@@ -13,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "socket.io": "^3.0.1"
+    "socket.io": "^1.7.4"
+  },
+  "scripts": {
+    "start": "node server.js"
   }
 }
