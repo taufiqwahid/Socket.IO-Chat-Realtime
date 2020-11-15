@@ -25,7 +25,12 @@ io.sockets.on("connection", (socket) => {
 
   //Send message
   socket.on("send message", (data) => {
-    io.sockets.emit("new message", { msg: data });
+    console.log(data, "data");
+    socket.join(data.room);
+    io.sockets
+      .to(data.room)
+      .emit("new message", { user: data.username, msg: data.messag });
+    io.sockets.emit("new message", { user: data.username, msg: data.messag });
   });
 });
 
